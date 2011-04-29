@@ -16,13 +16,6 @@ open(Rails.root.join('db').join('greater cairo districts.txt')) do |disticts|
     name = district.chomp.split(",")[1]
     District.find_or_create_by_name(name.strip.to_sym,{ :city_id => cairo.id})
   end
-
-admin = Administrator.find_or_create_by_login( 'admin', {
-                                       :password => 'admin',
-                                       :password_confirmation => 'admin',
-                                       :email => 'ahmad.bakr@espace.com.eg',
-                                       :name => 'Sharek Admin'})
-
 end
 
 puts 'Creating Urgencies.....'
@@ -31,7 +24,11 @@ URGENCIES.each do |urgency|
 end
 
 
-
+User.find_or_create_by_email("webmaster@sharekmasr.org", {
+                                      :password=>'sharek',
+                                      :password_confirmation=>"sharek",
+                                      :web_master=>true
+                  })
 
 
 
