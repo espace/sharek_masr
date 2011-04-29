@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110429193627) do
+ActiveRecord::Schema.define(:version => 20110429224733) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -32,24 +32,29 @@ ActiveRecord::Schema.define(:version => 20110429193627) do
   end
 
   create_table "needs", :force => true do |t|
-    t.text     "description",     :null => false
+    t.text     "description",                        :null => false
     t.integer  "city_id"
     t.integer  "district_id"
     t.string   "address"
-    t.integer  "urgency_id",      :null => false
-    t.integer  "category_id",     :null => false
-    t.boolean  "verified"
-    t.boolean  "satisfied"
+    t.integer  "urgency_id",                         :null => false
+    t.integer  "category_id",                        :null => false
+    t.boolean  "verified",        :default => false, :null => false
+    t.boolean  "satisfied",       :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",           :null => false
+    t.string   "title",                              :null => false
     t.integer  "organisation_id"
+    t.integer  "user_id"
   end
 
   create_table "organisations", :force => true do |t|
-    t.string   "name",       :null => false
+    t.string   "name",        :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
+    t.text     "description"
+    t.string   "address"
+    t.string   "phone"
   end
 
   create_table "urgencies", :force => true do |t|

@@ -5,8 +5,10 @@ class Need < ActiveRecord::Base
   belongs_to :urgency
   belongs_to :category
   belongs_to :organisation
-  
+  belongs_to :user
   #scopes
+  validates :title, :address, :urgency_id, :category_id, :presence=>true
+  
   
   scope :by_category, lambda { |category_id|
     self.where(:category_id => category_id)

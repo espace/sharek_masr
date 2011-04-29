@@ -1,5 +1,5 @@
 module ApplicationHelper
- def browse_need_url(options={})
+ def browse_need_path(options={})
     url="/browse_needs"
     return url if options.blank?
     url <<  "/category/#{options[:category_id]}" unless options[:category_id].blank?

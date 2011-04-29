@@ -1,9 +1,10 @@
 class NeedsController < ApplicationController
 
   def index
-  	puts params.inspect
-  	puts "************************************8"
-    @needs = Need.all
+    @needs = Need.not_satisfied
+    [:category_id, :district_id, :urgency_id].each do |filter|
+    	@needs = @needs.where(filter=>params[filter]) unless params[filter].blank?
+    end
   end
 
  
@@ -28,6 +29,11 @@ class NeedsController < ApplicationController
   
   def create
     @need = Need.new(params[:need])
+    if @need.save
+      redirect_to(@need, :notice => 'Need was successfully created.') 
+    else
+      render :action => "new"
+    end
   end
 
   

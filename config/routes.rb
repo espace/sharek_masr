@@ -6,9 +6,11 @@ Sharek::Application.routes.draw do
   resources :categories
 
   resources :districts
+  
+  resources :organisations
 
   resources :cities
-  match 'browse_needs/(/category/:category_id)(/urgency/:urgency_id)(/district/:district_id)', :to=>'needs#index'
+  match 'browse_needs(/category/:category_id)(/urgency/:urgency_id)(/district/:district_id)', :to=>'needs#index'
   resources :needs do
   	collection do
   		get  'satisfied'
