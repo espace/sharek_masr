@@ -11,6 +11,7 @@ cairo = City.find_or_create_by_name("القاهرة")
 
 
 puts 'Creating districts from greater cairo districts,txt ...'
+
 open(Rails.root.join('db').join('greater cairo districts.txt')) do |disticts|
   disticts.read.each_line do |district|
     name = district.chomp.split(",")[1]
@@ -21,6 +22,11 @@ end
 puts 'Creating Urgencies.....'
 URGENCIES.each do |urgency|
 	Urgency.find_or_create_by_name(:name => urgency)
+end
+
+puts 'Creating Categories....'
+CATEGORIES.each do |category|
+	Category.find_or_create_by_name(:name => category)
 end
 
 

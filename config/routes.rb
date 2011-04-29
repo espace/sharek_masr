@@ -4,6 +4,14 @@ Sharek::Application.routes.draw do
   resources :districts
 
   resources :cities
+  
+  resources :needs do
+  	collection do
+  		post 'by_category'
+  		post 'by_district'
+  	end
+  end
+  resources :urgencies
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
