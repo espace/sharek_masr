@@ -30,7 +30,11 @@ CATEGORIES.each do |category|
 end
 
 
-
+User.find_or_create_by_email("webmaster@sharekmasr.org", {
+                                      :password=>'sharek',
+                                      :password_confirmation=>"sharek",
+                                      :web_master=>true
+                  })
 
 
 
