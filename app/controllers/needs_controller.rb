@@ -1,6 +1,8 @@
 class NeedsController < ApplicationController
 
   def index
+  	puts params.inspect
+  	puts "************************************8"
     @needs = Need.all
   end
 
@@ -9,12 +11,8 @@ class NeedsController < ApplicationController
     @need = Need.find(params[:id])
   end
   
-  def by_category
-  	
-  end
-  
-  def by_district
-  	
+  def satisfied
+  	@needs = Need.satisfied
   end
 
  

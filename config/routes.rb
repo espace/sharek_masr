@@ -8,11 +8,10 @@ Sharek::Application.routes.draw do
   resources :districts
 
   resources :cities
-  
+  match 'browse_needs/(/category/:category_id)(/urgency/:urgency_id)(/district/:district_id)', :to=>'needs#index'
   resources :needs do
   	collection do
-  		post 'by_category'
-  		post 'by_district'
+  		get  'satisfied'
   	end
   end
   resources :urgencies
