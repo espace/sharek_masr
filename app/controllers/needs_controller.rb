@@ -10,11 +10,11 @@ class NeedsController < ApplicationController
   end
   
   def by_category
-  	@needs = Need.where(:category_id => params[:id])
+  	
   end
   
   def by_district
-  	@needs = Need.where(:district_id => params[:id])
+  	
   end
 
  

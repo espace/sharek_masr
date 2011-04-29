@@ -29,6 +29,13 @@ CATEGORIES.each do |category|
 	Category.find_or_create_by_name(:name => category)
 end
 
+puts "Creating organisations...."
+ORG.each do |org|
+	Organisation.find_or_create_by_name(:name => org)
+end
+
+
+puts "Creating admin user..."
 
 User.find_or_create_by_email("webmaster@sharekmasr.org", {
                                       :password=>'sharek',
