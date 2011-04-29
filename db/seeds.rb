@@ -17,6 +17,13 @@ open(Rails.root.join('db').join('greater cairo districts.txt')) do |disticts|
     District.find_or_create_by_name :name=>name.lstrip.rstrip, 
                                     :city_id => cairo.id
   end
+
+admin = Administrator.find_or_create_by_login( 'admin', {
+                                       :password => 'admin',
+                                       :password_confirmation => 'admin',
+                                       :email => 'ahmad.bakr@espace.com.eg',
+                                       :name => 'Sharek Admin'})
+
 end
 
 
