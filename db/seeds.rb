@@ -14,8 +14,7 @@ puts 'Creating districts from greater cairo districts,txt ...'
 open(Rails.root.join('db').join('greater cairo districts.txt')) do |disticts|
   disticts.read.each_line do |district|
     name = district.chomp.split(",")[1]
-    District.find_or_create_by_name :name=>name.lstrip.rstrip, 
-                                    :city_id => cairo.id
+    District.find_or_create_by_name(name.strip.to_sym,{ :city_id => cairo.id})
   end
 
 admin = Administrator.find_or_create_by_login( 'admin', {
@@ -25,6 +24,12 @@ admin = Administrator.find_or_create_by_login( 'admin', {
                                        :name => 'Sharek Admin'})
 
 end
+
+puts 'Creating Urgencies.....'
+URGENCIES.each do |urgency|
+	Urgency.find_or_create_by_name(:name => urgency)
+end
+
 
 
 
