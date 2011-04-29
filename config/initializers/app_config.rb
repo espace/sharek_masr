@@ -1,0 +1,1 @@
+URGENCIES = ["low","medium", "high"]
