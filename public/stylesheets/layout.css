@@ -1,0 +1,73 @@
+@charset "utf-8";
+/*
+  Copyright (c) 2011, Shar All rights reserved.
+  Website: www.SharekMasr.com
+	Sharek Master StyleSheet.
+*/
+
+/*----- RESET STYLE -----*/
+/*
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License:none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video{margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline;}
+/*--- HTML5 display-role reset for older browsers ---*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}
+body{line-height:1;}
+ol, ul{list-style:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after{content:''; content:none;}
+table{border-collapse:collapse; border-spacing:0;}
+
+/*----- Master StyleSheet -----*/
+/*--- Base Styles ---*/
+body,td,th{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#81807b; line-height:150%;}
+body{background-color:#999999; margin:0px;}
+*{outline:none; border:none;}
+a{font-family:Arial, Helvetica, sans-serif; font-size:1em; color:#BC3226;}
+a:link, a:visited, a:active, a:hover{text-decoration:none; color:#BC3226;}
+a:hover{text-decoration:underline; color:#BC3226;}
+h1,h2,h3,h4,h5,h6{font-family:Arial, Helvetica, sans-serif;margin:0 0 10px;}
+h1{font-size:2.2em; color:#9B9C9E;}
+h2{font-size:1.8em; color:#BC3226;}
+h3{font-size:1.4em; color:#BC3226;}
+h4{font-size:1.2em; color:#333333;}
+img{border:none;}
+ul{list-style:none; margin:0px; padding:0px;}
+p{padding:5px 0;}
+
+/*--- Generic Elements ---*/
+.hidetext{line-height:0px; font-size:0px; text-indent:-1000px; text-decoration:none; overflow:hidden; color:#d9cf9a;}
+.clear{clear:both;}
+
+/*--- General Elements ---*/
+.wrapper{width:1020px; margin:0 auto; text-shadow:0 1px 1px #fff;}
+.header{background: url(../images/header-bg.jpg) no-repeat 0 0; margin:0 auto; width:1020px; height:200px; position:relative; direction:rtl; border-bottom:4px solid #5c7b1d;}
+.container{background:none repeat scroll 0 0 #f3f3f3; -moz-border-radius:5px; -webkit-border-radius:5px; margin:0 auto; padding:20px 20px 50px; position:relative; min-height:500px;}
+.footer{background: url(../images/footer.png) no-repeat 0 0; width:1020px; height:179px; text-align:center; direction:rtl;color:#fff; padding-top: 10px;}
+
+/*--- Header Elements ---*/
+.header .logo{background:url(../images/logo.png) no-repeat 0 0; width:171px; height:166px; float:right; margin:20px 30px 0;}
+  .header .logo a{display:block; width:171px; height:166px;}
+.header .banner{background:url(../images/head-banner.png) no-repeat 0 0; width:609px; height:182px; float:left; margin: 10px 30px 0;}
+/*--- Navigation ---*/
+.navmain{background:url(../images/nav-background.png) repeat-x 0 0; height:60px; color:#fff; text-shadow: 0 1px 0 #80af30;}
+/*- Navigation -*/
+.navigation{background:url(../images/nav-background.png) repeat-x 0 0; height:60px; color:#fff; text-shadow: 0 1px 0 #80af30; font-size:26px; font-weight:bold; direction:rtl;}
+  .navigation ul.nav{margin:0; padding:7px 6px 0; line-height:100%; float:right;}
+    .navigation ul.nav li{margin:0 10px; padding:0 0 8px; float:right; position:relative; list-style:none; background:none;}
+	.navigation ul.nav li:hover{background:url(../images/master-assets/tip_arrow_hover.png) no-repeat 50% 90%;}
+	  .navigation ul.nav li:hover > a{background:#7f7f7f; color:#fff; -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, .2); -moz-box-shadow:0 1px 1px rgba(0, 0, 0, .2); box-shadow:0 1px 1px rgba(0, 0, 0, .2);}
+	.navigation ul.nav a{font-weight:bold; color:#fff; text-decoration:none; display:block; padding:7px 15px; margin:0; -webkit-border-radius:5px; -moz-border-radius:5px;}
+  .navigation ul.nav .current{background:url(../images/master-assets/tip_arrow.png) no-repeat 50% 90%;}
+    .navigation ul.nav .current a{background:#56741d; color:#fff; -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, .2); -moz-box-shadow:0 1px 1px rgba(0, 0, 0, .2); box-shadow:0 1px 1px rgba(0, 0, 0, .2);}
+    .navigation ul.nav li .menu-separator{background:none repeat scroll 0 0 #4D4D4D; width:1px; height:30px; margin-top:-3px;}
+    .navigation ul.nav li span.ar_dwn{float:right;width:7px;height:5px;background:url(../images/profile-assets/login-arrow_down.png) no-repeat 0 0;margin:5px 0 0 5px;}
+		
+/*-- Footer --*/
+.social{width:450px; margin:20px auto;}
+	.social .facebook{background:url(../images/facebook.png) no-repeat 0 0; width:220px; float:left; height:40px;}
+	.social .twitter{background:url(../images/twitter.png) no-repeat 0 0; width:202px; float:left; height:44px;}
