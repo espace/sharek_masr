@@ -8,8 +8,8 @@ gem 'rails', '3.0.7'
 gem 'pg', '0.11.0'
 
 gem 'devise',:git => "git://github.com/plataformatec/devise.git", :branch => "master"
-gem "oa-oauth", "~> 0.2.0.beta1" #, :require => "omniauth/oauth"
 gem 'omniauth', "~> 0.2.0.beta3"
+gem "oa-oauth", :require => "omniauth/oauth"
 
 
 # Use unicorn as the web server
