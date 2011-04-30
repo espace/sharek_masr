@@ -1,3 +1,161 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+    <!--content area -->
+    <div id="content">
+      <!--banner section -->
+      <div id="banner_wrapp">
+        <div id="banner"><img src="./images/kids.jpg" alt="" /></div>
+   
+          <div class="acord_box">
+            <div class="hdaccor">
+              <h2>International Students</h2>
+            </div>
+            <div class="slideaccor">
+              <div class="student_box"> <img src="./images/smiling child.jpg" alt="" />
+                <h2>Jai Parkash ( INDIA)</h2>
+                <p>Lorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit amet sem felisLorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit amet sem felis    Read More</p>
+              </div>
+            </div>
+          </div>
+          <div class="acord_box">
+            <div class="hdaccor">
+              <h2>Quick Links</h2>
+            </div>
+            <div class="slideaccor">
+              <ul>
+                <li><a href="#" class="active">Collge Exams List</a></li>
+                <li><a href="#">Illumni</a></li>
+                <li><a href="#">Sports Festivels</a></li>
+                <li><a href="#">National Day</a></li>
+                <li><a href="#">Books and Classis</a></li>
+                <li><a href="#">Our New courses</a></li>
+                <li><a href="#">Famous Courses</a></li>
+                <li><a href="#">A to Z Pages</a></li>
+                <li><a href="#">Top Courses</a></li>
+                <li><a href="#">Staff Section</a></li>
+              </ul>
+              <a href="#" class="btn_banner1">Go to Quick Link Page</a> </div>
+          </div>
+        </div>
+      </div>
+<!--
+      <div class="study_programs">
+        <ul>
+          <li><a href="#"><img src="./images/img-md1.jpg" alt="" /></a>
+            <div class="programdetail">
+              <div class="headingprogram">
+                <h2>Study Programs</h2>
+              </div>
+              <div class="detailprogram">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet sem felis. Donec adipiscing, velit vitae malesuada bibendum, mauris tortor fermentum ante, eu sodales diam quam vitae libero. Quisque sceleri.</p>
+                <div class="readmore"> <a href="#"> Read More</a> </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="#"><img src="./images/img-md2.jpg" alt="" /></a>
+            <div class="programdetail">
+              <div class="headingprogram">
+                <h2>Study Department</h2>
+              </div>
+              <div class="detailprogram">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet sem felis. Donec adipiscing, velit vitae malesuada bibendum, mauris tortor fermentum ante, eu sodales diam quam vitae libero. Quisque sceleri.</p>
+                <div class="readmore"> <a href="#"> Read More</a> </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="#"><img src="./images/img-md3.jpg" alt="" /></a>
+            <div class="programdetail">
+              <div class="headingprogram">
+                <h2>Computer Technology</h2>
+              </div>
+              <div class="detailprogram">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet sem felis. Donec adipiscing, velit vitae malesuada bibendum, mauris tortor fermentum ante, eu sodales diam quam vitae libero. Quisque sceleri.</p>
+                <div class="readmore"> <a href="#"> Read More</a> </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+-->
+      <!--News and spotlight container -->
+      <div class="outer_row">
+        <div class="col-left">
+          <div class="spotlight_slider">
+            <h2>Spotlights</h2>
+            <div class="box_spotlight"> <img src="./images/img-sm1.jpg" alt="" />
+              <div class="spot_desc">
+                <h3><a href="#">Lorem ipsum dolor sit amet consec.</a></h3>
+                <p>Lorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit amet sem felis. Dc adipiscing, velit vitae malesuada. <a href="#">Read More</a></p>
+              </div>
+            </div>
+            <div class="box_spotlight"> <img src="./images/img-sm2.jpg" alt="" />
+              <div class="spot_desc">
+                <h3><a href="#">Lorem ipsum dolor sit amet consec.</a></h3>
+                <p>Lorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit amet sem felis. Dc adipiscing, velit vitae malesuada. <a href="#">Read More</a></p>
+              </div>
+            </div>
+            <div class="box_spotlight"> <img src="./images/img-sm3.jpg" alt="" />
+              <div class="spot_desc">
+                <h3><a href="#">Lorem ipsum dolor sit amet consec.</a></h3>
+                <p>Lorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit amet sem felis. Dc adipiscing, velit vitae malesuada. <a href="#">Read More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="news_slider">
+            <h2>احتياجات</h2>
+            <%Need.all.each do |need|%>
+                <div class="news_box"> <span class="date"> <img src="./images/img-ico-calendar.gif" alt="" /> <strong>26 April</strong> </span>
+                  <div class="news_desc">
+                    <h3><a href="#"><%= link_to(need.title, need) %></h3>
+                    <p>Lorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit <a href="#">Read More</a></p>
+                  </div>
+                </div>
+            <%end%>        
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="newsletter">
+            <h2>University NewsLetter</h2>
+			<a href="#">Submit</a>
+            <input type="text" value="Enter Email Address" onfocus="if(this.value == 'Enter Email Address') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Enter Email Address'; }" />
+             </div>
+          <div class="coursesearch">
+            <h2>Course Finder</h2>
+            <ul>
+              <li>
+                <label>Enter a Keyword</label>
+                <input type="text" value="Search you any keyword" class="txt1" onfocus="if(this.value == 'Search you any keyword') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Search you any keyword'; }" />
+              </li>
+              <li> <span class="left">
+                <label>Degree Type</label>
+                <select>
+                  <option />Undergraduate
+                </select>
+                </span> <span class="right">
+                <label>Session</label>
+                <select>
+                  <option />2011-12
+                </select>
+                </span> </li>
+              <li> <span class="left">
+                <label>Campus</label>
+                <select>
+                  <option />Undergraduate
+                </select>
+                </span> <span class="right">
+                <label>Resident Type</label>
+                <span class="groupradio">
+                <label>
+                <input type="radio" name="city" checked="checked" />
+                Uk </label>
+                <label>
+                <input type="radio" name="city" />
+                Wales</label>
+                </span> </span> </li>
+              <li><a href="#" class="btn_search"><span>Search</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br class="clear" />
+    </div>
+  </div>
 
