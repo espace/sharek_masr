@@ -1,9 +1,17 @@
 <div>
   <h1><%=@need.title%></h1>
-  <p><%= @need.description %></p>
-  <p><%= @need.organisation.try(:name) %></p>
+  <p><strong><%= t('attributes.address')%></strong> <%= @need.address%></p>
+  <p><strong><%= t('attributes.category_id')%></strong> <%= @need.category.name%></p>
+  <p><strong><%= t('attributes.city_id')%></strong> <%= @need.city.name%></p>
+  <p><strong><%= t('attributes.created_at')%></strong> <%= @need.created_at%></p>
+  <p><strong><%= t('attributes.description')%></strong> <%= @need.description%></p>
+  <p><strong><%= t('attributes.district_id')%></strong> <%= @need.district.try(:name)%></p>
+  <p><strong><%= t('attributes.urgency_id')%></strong> <%= @need.urgency.name%></p>
+
+
   <p dir="rtl">
   تم التحقيق من قبل 
   <%= image_tag("http://www.resala.org/images/logo.png" ) %>
+  +201020304050  <%= mail_to "donate@resala.org" %>
   </p>
 </div>  

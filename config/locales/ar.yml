@@ -16,6 +16,7 @@ ar:
     city_id: "المدينة"
     district_id: "المنطقة"
     address: "العنوان"
+    created_at: "تاريخ الاضافة"
   activerecord:
     models:
       need: "حالة"
