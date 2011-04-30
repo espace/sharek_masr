@@ -40,3 +40,8 @@ module Sharek
     config.filter_parameters += [:password]
   end
 end
+
+FB_APP_ID='221886041162136'
+FB_APP_SECRET='5be49ab3da969472f3e3880b807653d7'
+
+
