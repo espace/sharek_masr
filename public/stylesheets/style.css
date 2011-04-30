@@ -851,7 +851,7 @@ left content section
 	float:left;
 	border:1px solid #869062;
 	background:#525939;
-	padding-left:9px;
+	padding-right:9px;
 	padding-top:6px;
 	padding-bottom:6px;
 }
@@ -870,12 +870,12 @@ left content section
 	border-top:0;
 	border-bottom:0;
 	background:#f0f0f0;
-	padding-left:9px;
+	padding-right:9px;
 	padding-top:5px;
 	padding-bottom:5px;
 }
 .blog_date p {
-	float:left;
+	float:right;
 	width:480px;
 	padding-bottom:0;
 	line-height:20px;
@@ -921,6 +921,7 @@ left content section
 	margin-bottom:8px;
 }
 .blog_content p {
+	direction: rtl;
 	text-align:justify;
 	word-spacing:1px;
 	padding-right:4px;
@@ -946,17 +947,17 @@ left content section
 	margin-bottom:12px;
 }
 .pager ul {
-	float:left;
+	float:right;
 }
 .pager ul li {
-	float:left;
+	float:right;
 	color:#525939;
 	font-size:12px;
 	line-height:21px;
 	font-weight:bold;
 }
 .pager ul li:first-child {
-	padding-right:10px;
+	padding-left:10px;
 }
 .pager ul li a {
 	display:block;
@@ -971,10 +972,11 @@ left content section
 	text-decoration:none;
 }
 .pager_arrow {
-	float:right;
+	float:left;
 	width:55px;
 }
 .pager_arrow a {
+	text-align: left;
 	display:block;
 	float:left;
 	text-indent:-9999px;
@@ -1371,12 +1373,13 @@ right content section
 }
 .content_box li a {
 	display:block;
-	float:left;
+	float:right;
 	font-weight:bold;
 	line-height:25px;
-	background:url(../images/sep-list-right.gif) no-repeat 9px 8px;
-	padding-left:21px;
+	background:url(../images/sep-list-right.gif) no-repeat 200px 8px;
+	padding-right:21px;
 	color:#333;
+	width: 195px;
 }
 .content_box li a:hover, .content_box li a.active {
 	background:url(../images/bg-hover-list.png) no-repeat left top;
@@ -1402,9 +1405,9 @@ footer section
 	margin:0 auto;
 }
 #left_footer {
-	float:left;
+	float:right;
 	width:540px;
-	background:url(../images/bg-border-left.png) repeat-y right top;
+	background:url(../images/bg-border-left.png) repeat-y left top;
 	height:121px;
 	padding-right:2px;
 	padding-top:15px;
@@ -1434,8 +1437,8 @@ footer section
 #right_footer {
 	width:416px;
 	padding-right:2px;
-	float:right;
-	background:url(../images/bg-border-left.png) repeat-y right top;
+	float:left;
+	background:url(../images/bg-border-left.png) repeat-y left top;
 	height:136px;
 }
 .tweetbox {
