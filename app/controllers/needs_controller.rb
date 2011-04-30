@@ -5,10 +5,14 @@ class NeedsController < ApplicationController
     [:category_id, :district_id, :urgency_id].each do |filter|
     	@needs = @needs.where(filter=>params[filter]) unless params[filter].blank?
     end
-    @categories = Category.all
-    @urgencies = Urgency.all
-    @disticts = District.all
-    
+    puts "############"
+    puts "############"
+    p @needs
+    puts "############"
+    puts "############"
+    puts "############"
+
+
   end
 
  
