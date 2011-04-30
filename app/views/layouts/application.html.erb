@@ -13,12 +13,12 @@
 <div id="outer_wrapper">
   <div id="wrapper">
     <!--header -->
-    <div id="header"> <a href="./index.html"><img src="../images/logo.png" alt="" id="logo" /></a>
+    <div id="header"> <a href="./index.html"><img src="/images/logo.png" alt="" id="logo" /></a>
       <div id="right_header">
         <div id="search_header">
           <ul>
             <li>
-              <img src="../images/head-banner.png" />
+              <img src="/images/head-banner.png" />
             </li> 
           </ul>
         </div>
@@ -36,6 +36,37 @@
           <li><a href="<%=browse_need_path({:category_id => 1})%>">إتصل بنا</a></li>
       </ul>
     </div>
+    <div id="content">
+      <!--banner section -->
+      <div id="banner_wrapp">
+        <div id="banner"><img src="/images/kids.jpg" alt="" /></div>
+           <div id="banner_accordion">
+          <div class="acord_box">
+            <div class="hdaccor">
+              <h2>التصنيف حسب</h2>
+            </div>
+            <div class="slideaccor">
+              <h5>عن طريق الاقسام</h5>
+              <ul>
+                <%=form_tag('/needs') do %>
+                    <%=select_tag "category_id", options_from_collection_for_select(@categories, "id", "name"), {:onchange => "go();"}%>
+                <%end%>             
+              <h5> عن طريق الاهمية</h5>
+
+               <%=form_tag('/needs') do %>
+                    <%=select_tag "urgency_id", options_from_collection_for_select(@urgencies, "id", "name"), {:onchange => "go2();"}%>
+                <%end%>             
+              <h5>عن طريق المناطق</h5>
+
+                <%=form_tag('/needs') do %>
+                    <%=select_tag "district_id", options_from_collection_for_select(@districts, "id", "name"), {:onchange => "go3();"}%>
+                <%end%>             
+  
+              </ul>
+          </div>
+        </div>
+        </div>
+      </div>
 
         
 
@@ -110,4 +141,23 @@
   <br class="clear" />
 </div>
 </body>
+<script type=text/javascript>
+function go(){
+    category_id = $('#category_id option:selected').val();
+    url = 'http://localhost:3000/browse_needs/category/'+ category_id;
+    window.location=url;
+}
+
+function go2(){
+    category_id = $('#urgency_id option:selected').val();
+    url = 'http://localhost:3000/browse_needs/urgency/'+ category_id;
+    window.location=url;
+}
+function go3(){
+    category_id = $('#district_id option:selected').val();
+    url = 'http://localhost:3000/browse_needs/district/'+ category_id;
+    window.location=url;
+}
+
+</script>
 </html>

@@ -89,11 +89,11 @@ WRAPPER AREA
 */
 #outer_wrapper {
 	width:100%;
-	background:url(../images/bg-body.jpg) repeat-x top;
+	background:url(/images/bg-body.jpg) repeat-x top;
 }
 #outer_wrapper_inner {
 	width:100%;
-	background:url(../images/bg-body-inner.jpg) repeat-x top;
+	background:url(/images/bg-body-inner.jpg) repeat-x top;
 }
 #wrapper {
 	width:960px;
@@ -130,7 +130,7 @@ header section
 }
 #top_nav li {
 	float:left;
-	background:url(../images/sep-header.png) no-repeat left center;
+	background:url(/images/sep-header.png) no-repeat left center;
 	padding:0 6px 0 8px;
 }
 #top_nav li:first-child {
@@ -146,11 +146,11 @@ header section
 	text-decoration:none;
 }
 #top_nav li a:hover, #top_nav li a.active {
-	background:url(../images/bg-topnav-left.png) no-repeat left top;
+	background:url(/images/bg-topnav-left.png) no-repeat left top;
 	color:#fff;
 }
 #top_nav li a:hover span, #top_nav li a.active span {
-	background:url(../images/bg-topnav-right.png) no-repeat right top;
+	background:url(/images/bg-topnav-right.png) no-repeat right top;
 }
 #top_nav li a span {
 	display:block;
@@ -188,11 +188,11 @@ header section
 	line-height:25px;
 	padding-left:28px;
 	padding-right:15px;
-	background:url(../images/bg-btn-search.png) no-repeat 12px 7px #525939;
+	background:url(/images/bg-btn-search.png) no-repeat 12px 7px #525939;
 }
 #search_header li a:hover {
 	text-decoration:none;
-	background:url(../images/bg-btn-search.png) no-repeat 12px 7px #000;
+	background:url(/images/bg-btn-search.png) no-repeat 12px 7px #000;
 }
 /*
 ==============================================
@@ -263,7 +263,7 @@ navigation section
 	color:#fff;
 }
 #nav li ul li a:hover, #nav li ul li:hover > a {
-	background:url(../images/hover-list.png) no-repeat left top;
+	background:url(/images/hover-list.png) no-repeat left top;
 	color:#525939;
 }
 #nav li ul li ul {
@@ -287,7 +287,7 @@ navigation section
 }
 #nav li ul li ul li a:hover, #nav li ul ul li:hover > a {
 	color:#fff;
-	background:url(../images/bg-hover-list2.png) no-repeat left top;
+	background:url(/images/bg-hover-list2.png) no-repeat left top;
 }
 /*
 ==============================================
@@ -330,7 +330,7 @@ banner section
 	width:230px;
 	float:left;
 	margin-bottom:2px;
-	background:url(../images/bg-tran-1.png);
+	background:url(/images/bg-tran-1.png);
 	overflow:hidden;
 }
 .hdaccor {
@@ -382,17 +382,17 @@ banner section
 	text-decoration:none;
 	padding-right:28px;
 	width:182px;
-	background:url(../images/sep-acord.gif) no-repeat 195px 6px;
+	background:url(/images/sep-acord.gif) no-repeat 195px 6px;
 }
 .slideaccor ul li a:hover, .slideaccor ul li a.active {
-	background:url(../images/sep-acord.gif) no-repeat 195px 6px #494e34;
+	background:url(/images/sep-acord.gif) no-repeat 195px 6px #494e34;
 }
 .slideaccor h6 {
 	font-size:11px;
 	color:#fff;
 	line-height:21px;
 	margin-bottom:14px;
-	background:url(../images/bg-tran-1.png);
+	background:url(/images/bg-tran-1.png);
 	padding-left:10px;
 	float:left;
 	width:200px;
@@ -402,7 +402,7 @@ banner section
 	width:201px;
 	height:32px;
 	float:left;
-	background:url(../images/btn-slide1.png) no-repeat left top;
+	background:url(/images/btn-slide1.png) no-repeat left top;
 	text-align:center;
 	line-height:30px;
 	font-size:13px;
@@ -416,7 +416,7 @@ banner section
 	width:201px;
 	height:32px;
 	float:left;
-	background:url(../images/btn-slide2.png) no-repeat left top;
+	background:url(/images/btn-slide2.png) no-repeat left top;
 	text-align:center;
 	line-height:30px;
 	font-size:13px;
@@ -451,7 +451,7 @@ Banner inner Page
 	left:14px;
 	display:block;
 	bottom:18px;
-	background:url(../images/bg-heading-banner.png) no-repeat left top;
+	background:url(/images/bg-heading-banner.png) no-repeat left top;
 	width:171px;
 	height:123px;
 	text-align:center;
@@ -467,7 +467,7 @@ Banner inner Page
 	left:14px;
 	display:block;
 	bottom:15px;
-	background:url(../images/hd-news.png) no-repeat left top;
+	background:url(/images/hd-news.png) no-repeat left top;
 	width:304px;
 	height:103px;
 	font-size:60px;
@@ -482,7 +482,7 @@ Banner inner Page
 	left:14px;
 	display:block;
 	bottom:15px;
-	background:url(../images/hd-gallery.png) no-repeat left top;
+	background:url(/images/hd-gallery.png) no-repeat left top;
 	width:334px;
 	height:103px;
 	text-align:center;
@@ -498,7 +498,7 @@ Banner inner Page
 	left:14px;
 	display:block;
 	bottom:15px;
-	background:url(../images/hd-contactus.png) no-repeat left top;
+	background:url(/images/hd-contactus.png) no-repeat left top;
 	width:264px;
 	height:93px;
 	text-align:center;
@@ -514,7 +514,7 @@ Banner inner Page
 	left:14px;
 	display:block;
 	bottom:18px;
-	background:url(../images/hd-courses.png) no-repeat left top;
+	background:url(/images/hd-courses.png) no-repeat left top;
 	width:171px;
 	height:123px;
 	text-align:center;
@@ -568,7 +568,7 @@ Study Programs
 	float:left;
 	width:279px;
 	padding:6px 10px;
-	background:url(../images/bg-tran-1.png);
+	background:url(/images/bg-tran-1.png);
 }
 .study_programs li .detailprogram p {
 	color:#fff;
@@ -589,7 +589,7 @@ Study Programs
 	color:#fff;
 	font-family:tahoma, arial, sans-serif;
 	padding-right:10px;
-	background:url(../images/sep-program.png) no-repeat left 4px;
+	background:url(/images/sep-program.png) no-repeat left 4px;
 	line-height:15px;
 }
 .outer_row {
@@ -681,7 +681,7 @@ Study Programs
 	float:left;
 	width:288px;
 	height:47px;
-	background:url(../images/bg-newsletter.jpg) no-repeat left top;
+	background:url(/images/bg-newsletter.jpg) no-repeat left top;
 	border:1px solid #dddddd;
 	padding:10px;
 	margin-bottom:9px;
@@ -797,7 +797,7 @@ Study Programs
 .coursesearch ul li a.btn_search {
 	display:block;
 	float:left;
-	background:url(../images/bg-btn-left.png) no-repeat left top;
+	background:url(/images/bg-btn-left.png) no-repeat left top;
 	height:25px;
 	line-height:25px;
 	padding-left:23px;
@@ -808,7 +808,7 @@ Study Programs
 .coursesearch ul li a.btn_search span {
 	padding-right:20px;
 	cursor:pointer;
-	background:url(../images/bg-btn-right.png) no-repeat right top;
+	background:url(/images/bg-btn-right.png) no-repeat right top;
 }
 /*
 ==============================================
@@ -980,12 +980,12 @@ left content section
 	text-indent:-9999px;
 	border:1px solid #ccc;
 	height:19px;
-	background:url(../images/img-pager-left.png) no-repeat center center #fff;
+	background:url(/images/img-pager-left.png) no-repeat center center #fff;
 	width:19px;
 	margin-left:4px;
 }
 .pager_arrow a.pagerright {
-	background:url(../images/img-pager-right.png) no-repeat center center #fff;
+	background:url(/images/img-pager-right.png) no-repeat center center #fff;
 }
 #comments {
 	float:left;
@@ -1014,7 +1014,7 @@ left content section
 	float:right;
 	padding-left:23px;
 	line-height:25px;
-	background:url(../images/bg-btn-left.png) no-repeat left top;
+	background:url(/images/bg-btn-left.png) no-repeat left top;
 	color:#fff;
 	font-size:12px;
 	font-weight:bold;
@@ -1023,7 +1023,7 @@ left content section
 	display:block;
 	float:left;
 	padding-right:23px;
-	background:url(../images/bg-btn-right.png) no-repeat right top;
+	background:url(/images/bg-btn-right.png) no-repeat right top;
 }
 .comment_main {
 	float:left;
@@ -1167,13 +1167,13 @@ left content section
 	width:721px;
 }
 .accor_heading h5:hover {
-	background: url(../images/bg-accor2.png) no-repeat 8px 7px #525939;
+	background: url(/images/bg-accor2.png) no-repeat 8px 7px #525939;
 	color:#fff;
 }
 .accor_heading h5 {
 	width:679px;
 	float:left;
-	background: url(../images/bg-accor1.png) no-repeat 8px 7px #eee;
+	background: url(/images/bg-accor1.png) no-repeat 8px 7px #eee;
 	border:1px solid #cecece;
 	padding:5px 10px;
 	padding-left:30px;
@@ -1184,7 +1184,7 @@ left content section
 	line-height:16px;
 }
 .downToggle h5 {
-	background: url(../images/bg-accor3.png) no-repeat 8px 7px #525939;
+	background: url(/images/bg-accor3.png) no-repeat 8px 7px #525939;
 	color:#fff;
 }
 .accor_content {
@@ -1272,7 +1272,7 @@ right content section
 	position:absolute;
 	right:5px;
 	bottom:5px;
-	background:url(../images/hd-applyow.png) no-repeat left top;
+	background:url(/images/hd-applyow.png) no-repeat left top;
 	width:113px;
 	height:32px;
 	text-indent:-9999px;
@@ -1326,7 +1326,7 @@ right content section
 	float:left;
 	padding-left:23px;
 	line-height:25px;
-	background:url(../images/bg-btn-left.png) no-repeat left top;
+	background:url(/images/bg-btn-left.png) no-repeat left top;
 	color:#fff;
 	font-size:12px;
 	font-weight:bold;
@@ -1335,7 +1335,7 @@ right content section
 	display:block;
 	float:left;
 	padding-right:23px;
-	background:url(../images/bg-btn-right.png) no-repeat right top;
+	background:url(/images/bg-btn-right.png) no-repeat right top;
 }
 .content_box {
 	float:left;
@@ -1354,14 +1354,14 @@ right content section
 	color:#999;
 	font-family:tahoma, arial, sans-serif;
 	font-weight:normal;
-	background:url(../images/ico-rss.png) no-repeat left top;
+	background:url(/images/ico-rss.png) no-repeat left top;
 	padding-left:22px;
 }
 .content_box_rss li {
 	float:left;
 	width:200px;
 	padding-left:13px;
-	background:url(../images/sep-list-right.gif) no-repeat 2px 6px;
+	background:url(/images/sep-list-right.gif) no-repeat 2px 6px;
 	line-height:18px;
 	padding-bottom:2px;
 }
@@ -1374,12 +1374,12 @@ right content section
 	float:left;
 	font-weight:bold;
 	line-height:25px;
-	background:url(../images/sep-list-right.gif) no-repeat 9px 8px;
+	background:url(/images/sep-list-right.gif) no-repeat 9px 8px;
 	padding-left:21px;
 	color:#333;
 }
 .content_box li a:hover, .content_box li a.active {
-	background:url(../images/bg-hover-list.png) no-repeat left top;
+	background:url(/images/bg-hover-list.png) no-repeat left top;
 	line-height:25px;
 	color:#fff;
 	width:200px;
@@ -1394,7 +1394,7 @@ footer section
 #outer_footer {
 	width:100%;
 	height:182px;
-	background:url(../images/bg-footer.png) repeat-x left top #00456c;
+	background:url(/images/bg-footer.png) repeat-x left top #00456c;
 	float:left;
 }
 #footer {
@@ -1404,7 +1404,7 @@ footer section
 #left_footer {
 	float:left;
 	width:540px;
-	background:url(../images/bg-border-left.png) repeat-y right top;
+	background:url(/images/bg-border-left.png) repeat-y right top;
 	height:121px;
 	padding-right:2px;
 	padding-top:15px;
@@ -1425,7 +1425,7 @@ footer section
 	font-family:tahoma, arial, sans-serif;
 	color:#feffff;
 	padding-right:8px;
-	background:url(../images/sep-program.png) no-repeat right 4px;
+	background:url(/images/sep-program.png) no-repeat right 4px;
 	line-height:15px;
 }
 #left_footer li ul li {
@@ -1435,7 +1435,7 @@ footer section
 	width:416px;
 	padding-right:2px;
 	float:right;
-	background:url(../images/bg-border-left.png) repeat-y right top;
+	background:url(/images/bg-border-left.png) repeat-y right top;
 	height:136px;
 }
 .tweetbox {
@@ -1489,7 +1489,7 @@ footer section
 .bottom_links {
 	width:416px;
 	float:left;
-	background:url(../images/bg-border.png) repeat-x top;
+	background:url(/images/bg-border.png) repeat-x top;
 	padding-top:2px;
 	height:50px;
 }
@@ -1497,7 +1497,7 @@ footer section
 	float:left;
 	width:203px;
 	padding-right:2px;
-	background:url(../images/bg-border-left.png) repeat-y right top;
+	background:url(/images/bg-border-left.png) repeat-y right top;
 	height:37px;
 	padding-top:13px;
 }
@@ -1538,7 +1538,7 @@ footer section
 	display:block;
 	float:left;
 	padding-right:27px;
-	background:url(../images/btn-top.png) no-repeat right top;
+	background:url(/images/btn-top.png) no-repeat right top;
 	line-height:19px;
 }
 /*Contact us*/
@@ -1547,7 +1547,7 @@ footer section
 	float:left;
 	width:938px;
 	border:1px solid #ccc;
-	background:url(../images/bg-trans1.png);
+	background:url(/images/bg-trans1.png);
 	padding:14px 10px;
 	padding-bottom:0px;
 	margin-bottom:20px;
@@ -1556,7 +1556,7 @@ footer section
 	width:906px;
 	float:left;
 	border:1px solid #ccc;
-	background:url(../images/bg-trans1.png);
+	background:url(/images/bg-trans1.png);
 	padding:15px 10px 10px 20px;
 	margin-bottom:10px;
 }
@@ -1690,7 +1690,7 @@ footer section
 	float:left;
 	width:938px;
 	border:1px solid #ccc;
-	background:url(../images/bg-trans1.png);
+	background:url(/images/bg-trans1.png);
 	padding:14px 10px;
 	padding-bottom:0px;
 	margin-bottom:20px;
@@ -1787,7 +1787,7 @@ footer section
 	display:none;
 	float:left;
 	width:195px;
-	background:url(../images/bg-tran-1.png);
+	background:url(/images/bg-tran-1.png);
 	color:#fff;
 	font-size:11px;
 	left:0;
