@@ -1,4 +1,30 @@
+<<<<<<< HEAD
+    <!--content area -->
+=======
       <!--banner section -->
+      <div id="banner_wrapp">
+        <div id="banner"><img src="./images/kids.jpg" alt="" /></div>
+           <div id="banner_accordion">
+          <div class="acord_box">
+            <div class="hdaccor">
+              <h2>التصنيف حسب</h2>
+            </div>
+            <div class="slideaccor">
+              <h5>عن طريق الاهمية</h5>
+              <ul>
+                <%=form_tag('/needs') do %>
+                    <%=select_tag "category_id", options_from_collection_for_select(@categories, "id", "name"), {:onchange => "go();"}%>
+                <%end%>             
+                <li><a href="#" class="active">Browse undergraduate</a></li>
+                <li><a href="#">Browse postgraduate</a></li>
+                <li><a href="#">Browse Courses</a></li>
+                <li><a href="#">Others</a></li>
+              </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+>>>>>>> 3575d51dd51b8404bcaa91d7ae705e1f1d065825
 <!--
       <div class="study_programs">
         <ul>
