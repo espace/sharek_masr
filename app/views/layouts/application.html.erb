@@ -4,11 +4,56 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Home: Welcome</title>
 <!--CSS -->
- 	<%= stylesheet_link_tag 'style', 'colorbox' %>
+ 	<%= stylesheet_link_tag %W(style colorbox)  %>
 <!--Js -->
-<%= javascript_include_tag  "jquery", "swiss", "hoverIntent", "functions", "jquery.colorbox"  %>
+
+<%= javascript_include_tag %W(jquery swiss hoverIntent functions jquery.colorbox)  %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
+     <div id='fb-root'></div>
+      <script>
+      <!--
+       fb_app = '<%=FB_APP_ID%>';
+       
+        window.fbAsyncInit = function() {
+          FB.init({appId: fb_app, status: true, cookie: true, xfbml: true});
+          FB.Event.subscribe('auth.login', function(response) {
+            if (response.session) {
+              access_token = response.session.access_token;
+              uid = response.session.uid;
+              //Fetching user name and email
+              FB.api('/me', function(response) {
+                if (response.name){
+                  user_name = response.name;
+                }
+                if (response.email){
+                  email = response.email;
+                }
+                facebookLogin(access_token,uid,user_name,email);
+              });   
+            } else {
+              alert(alerts.facebookSessioExpired());
+              loc = window.location;
+              window.location = loc;
+              return;
+            } 
+          });
+          FB.getLoginStatus(function(response) {
+            if (response.session) {
+              current_uid = FB.getSession().uid;
+              $("#fb_id").val(current_uid);
+            }
+          });
+        };
+        (function() {
+          var e = document.createElement('script'); 
+          e.async = true;
+          e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+          document.getElementById('fb-root').appendChild(e);
+        }());
+      //-->
+    </script>
+
 <!--wrapper -->
 <div id="outer_wrapper">
   <div id="wrapper">
@@ -68,9 +113,9 @@
         </div>
       </div>
 
-        
-
-  <%= yield %>
+    <div id="content">    
+      <%= yield %>
+    </div>
 
   <!--footer -->
   <div id="outer_footer">

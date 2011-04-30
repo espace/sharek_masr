@@ -38,6 +38,8 @@ class NeedsController < ApplicationController
   def create
     @need = Need.new(params[:need])
     if @need.save
+      fb_id = params[:fb_id]
+      Vote.create(:need_id=>@need.id, :fb_id=>fb_id) unless fb_id.blank?
       redirect_to(@need, :notice => 'Need was successfully created.') 
     else
       render :action => "new"
