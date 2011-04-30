@@ -1,89 +1,158 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>شارك</title>
-  <%= stylesheet_link_tag "layout" %>
-  <%= javascript_include_tag "jquery-1.5.2.min", "application" %>
-  <%= csrf_meta_tag %>
-	
-</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Home: Welcome</title>
+<!--CSS -->
+ 	<%= stylesheet_link_tag 'style', 'colorbox' %>
+<!--Js -->
+<%= javascript_include_tag  "jquery", "swiss", "hoverIntent", "functions", "jquery.colorbox"  %>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
-  <div id="fb-root"></div>
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({appId: '<%= FB_APP_ID%>', status: true, cookie: true,
-               xfbml: true});
-               
-      fbAfterInit();         
-    };
-    (function() {
-      var e = document.createElement('script'); e.async = true;
-      e.src = document.location.protocol +
-        '//connect.facebook.net/en_US/all.js';
-      document.getElementById('fb-root').appendChild(e);
-    }());
-  </script>
-  <div class="wrapper">
-  	<!-- Header -->
-  	<div class="header">
-      <!-- Logo Start -->
-      <div class="logo">
-        <h1 class="hidetext"><a href="javascript:void(0);">شارك</a></h1>
+     <div id='fb-root'></div>
+      <script>
+      <!--
+       fb_app = '<%=FB_APP_ID%>';
+       
+        window.fbAsyncInit = function() {
+          FB.init({appId: fb_app, status: true, cookie: true, xfbml: true});
+          FB.Event.subscribe('auth.login', function(response) {
+            if (response.session) {
+              access_token = response.session.access_token;
+              uid = response.session.uid;
+              //Fetching user name and email
+              FB.api('/me', function(response) {
+                if (response.name){
+                  user_name = response.name;
+                }
+                if (response.email){
+                  email = response.email;
+                }
+                facebookLogin(access_token,uid,user_name,email);
+              });   
+            } else {
+              alert(alerts.facebookSessioExpired());
+              loc = window.location;
+              window.location = loc;
+              return;
+            } 
+          });
+          FB.getLoginStatus(function(response) {
+            if (response.session) {
+              current_uid = FB.getSession().uid;
+              $("#fb_id").val(current_uid);
+            }
+          });
+        };
+        (function() {
+          var e = document.createElement('script'); 
+          e.async = true;
+          e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+          document.getElementById('fb-root').appendChild(e);
+        }());
+      //-->
+    </script>
+
+<!--wrapper -->
+<div id="outer_wrapper">
+  <div id="wrapper">
+    <!--header -->
+    <div id="header"> <a href="./index.html"><img src="../images/logo.png" alt="" id="logo" /></a>
+      <div id="right_header">
+        <div id="search_header">
+          <ul>
+            <li>
+              <img src="../images/head-banner.png" />
+            </li> 
+          </ul>
+        </div>
       </div>
-      <div class="banner">
-      	<h2 class="hidetext">شارك - أتبرع - إصنع فرق</h2>
-      </div>
-      <div class="clear"></div>
-      <!-- Logo End -->
     </div>
-    <!-- Header End -->
-      <!-- Navigation Start -->
-      <div class="navigation">
-        <!-- Navigation Menu Start -->
-        <ul class="nav">
-          <li class="current"><a href="<%=root_path%>">الرئيسية</a></li>
-          <li><a href="javascript:void(0);">عن الموقع</a></li>
+    <!--Menu Area -->
+    <div id="nav">
+      <ul>
+         <li class="current"><a href="<%=root_path%>">الرئيسية</a></li>
           <li><a href="<%=needs_url%>">إحتياجات</a></li>
+
           <li><a href="<%=new_need_path%>">أبلغ عن حالة</a></li>
           <li><a href="<%=satisfied_needs_path%>">إنجازات</a></li>
+          <li><a href="javascript:void(0);">عن الموقع</a></li>
           <li><a href="<%=browse_need_path({:category_id => 1})%>">إتصل بنا</a></li>
+      </ul>
+    </div>
+
+        
+  <div id="content">
+    <%= yield %>
+  </div>
+
+  <!--footer -->
+  <div id="outer_footer">
+    <div id="footer">
+      <div id="left_footer">
+        <ul>
+          <li>
+            <h2>About Us</h2>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="#">Site map</a></li>
+              <li><a href="#">International students</a></li>
+              <li><a href="#">About College</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Academia</h2>
+            <ul>
+              <li><a href="#">Academic Calendar</a></li>
+              <li><a href="#">Bookstore</a></li>
+              <li><a href="#">Colleges &amp; Schools</a></li>
+              <li><a href="#">Courses</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Portals</h2>
+            <ul>
+              <li><a href="#">Directories</a></li>
+              <li><a href="#">A–Z Index</a></li>
+              <li><a href="#">Quick Links</a></li>
+              <li><a href="#">cMail | xMail</a></li>
+            </ul>
+          </li>
         </ul>
-        <!-- Navigation Menu End -->
       </div>
-      <div class="clear"></div>
-      <!-- Navigation End -->
-    <!-- Container -->
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-
-<div id="divInfo">
-friends:
-</div>
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    console.log("included");
-    alert('yalla');
-//    getFacebookFriends();
-  });
-</script> 
-      <%= yield %>
-    	
-    </div>
-    <!-- Container End -->
-    <!-- Footer -->
-    <div class="footer">
-      <div class="copyright"> بيان الخصوصية | اتصل بنا | © 2011 جميع الحقوق محفوظة لشركة SHAREK. الملكية والإدارة لشركة SHAREK.</div>
-      <div class="social">
-      	<div class="facebook"><a href="javascript:void(0);" class="hidetext">Facebook</a></div>
-        <div class="twitter"><a href="javascript:void(0);" class="hidetext">Facebook</a></div>
-        <div class="clear"></div>
+      <div id="right_footer">
+        <div class="tweetbox">
+          <div class="left_tweet">
+            <p><a href="#">@University college</a> By Simon Cole 11-04-2011</p>
+            <p>“ Lorem ipsum dolor sit amet, ctetur adiiscing top of elit. Quisque sit amet sem felis  “</p>
+            <em class="shoutright">&nbsp;</em> </div>
+          <div class="right_tweet"> <img src="./images/bg-tweet.png" alt="" />
+            <h3>Latest Tweet</h3>
+          </div>
+        </div>
+        <div class="bottom_links">
+          <div class="left_links">
+            <ul>
+              <li>
+                <h3>Follow Us</h3>
+              </li>
+              <li><a href="#"><img src="./images/img-fb.png" alt="" /></a></li>
+              <li><a href="#"><img src="./images/img-tw.png" alt="" /></a></li>
+              <li><a href="#"><img src="./images/img-dg.png" alt="" /></a></li>
+              <li><a href="#"><img src="./images/img-ut.png" alt="" /></a></li>
+            </ul>
+          </div>
+          <div class="right_links">
+            <h3>Call: (800) 123-4567</h3>
+          </div>
+        </div>
       </div>
-       
+      <div class="bottom_footer">
+        <p>&copy; 2011 College Site All Rights Reserved</p>
+        <a href="#" id="topScroll">Back to Top</a> </div>
     </div>
-		<!-- Footer End -->
+  </div>
+  <br class="clear" />
 </div>
 </body>
 </html>

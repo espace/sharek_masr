@@ -6,6 +6,7 @@ class Need < ActiveRecord::Base
   belongs_to :category
   belongs_to :organisation
   belongs_to :user
+  has_many   :votes
   #scopes
   validates :title, :address, :urgency_id, :category_id, :presence=>true
   
