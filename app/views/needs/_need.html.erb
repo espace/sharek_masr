@@ -1,4 +1,13 @@
-<div>
-	<%= need.description %>
+<div class="blog_box">
+  <div class="blog_heading">
+    <h2><%= link_to(need.title, need)%></h2>
+  </div>
+  <div class="blog_date">
+    <p>تم الاضافة في<%= need.created_at%> </p>
+    <div class="social_panel"> <a href="#"><img src="../images/bg-tweet.gif" alt="" /></a> <a href="#"><img src="../images/bg-facebook.gif" alt="" /></a> </div>
+  </div>
+  <div class="blog_content"> 
+    <p><%= need.description%></p>
+  </div>
 </div>
 
