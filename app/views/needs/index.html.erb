@@ -1,5 +1,10 @@
 <div id="left_content">
   <h1>احتياجات</h1>
-  <%=render :partial=>'need',  :collection=>@needs%>
+  <%if @needs.empty?%>
+    لا يوجد احتياجات
+  <%else%>
+   <%=render :partial=>'need',  :collection=>@needs%>
+  <%end%>
+ 
   <br class="clear" />
 </div>

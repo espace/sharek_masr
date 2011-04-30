@@ -16,7 +16,7 @@ class Need < ActiveRecord::Base
   }
  
   scope :not_satisfied, where(:verified => true, :satisfied =>false)
-  scope :satisfied, where(:satisfied => true)
+  scope :satisfied, where(:satisfied => true).order("created_at DESC")
   scope :by_district, lambda { |district_id|
 	 self.where(:district_id => district_id)
  }
