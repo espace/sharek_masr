@@ -25,3 +25,7 @@ Sharek::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 end
 
+FB_APP_ID='221886041162136'
+FB_APP_SECRET='5be49ab3da969472f3e3880b807653d7'
+
+
