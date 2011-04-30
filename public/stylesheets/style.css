@@ -88,6 +88,7 @@ WRAPPER AREA
 ==============================================
 */
 #outer_wrapper {
+  float:left;
 	width:100%;
 	background:url(/images/bg-body.jpg) repeat-x top;
 }

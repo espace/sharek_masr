@@ -3,8 +3,23 @@
 
 ar:
   hello: "Hello world"
+  helpers:
+    submit:
+      create: "تبليغ"
+      update: "تحديث {{model}}"
   attributes:
     name: "الاسم"
+    title: "الاسم"
+    description: "الوصف"
+    urgency_id: "الأهمية"
+    category_id: "التصنيف"
+    city_id: "المدينة"
+    district_id: "المنطقة"
+    address: "العنوان"
+  activerecord:
+    models:
+      need: "حالة"
+
   errors:
     messages:
       blank: "برجاء ادخال البيانات"

@@ -2,6 +2,8 @@
   <h1><%=@need.title%></h1>
   <p><%= @need.description %></p>
   <p><%= @need.organisation.try(:name) %></p>
-  <%= button_to "Donate"%>
-
+  <p dir="rtl">
+  تم التحقيق من قبل 
+  <%= image_tag("http://www.resala.org/images/logo.png" ) %>
+  </p>
 </div>  

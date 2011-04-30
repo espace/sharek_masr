@@ -1,56 +1,54 @@
-
-<%= form_for(@need) do |f| %>
-  <% if @need.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@need.errors.count, "error") %> prohibited this need from being saved:</h2>
-
+<div id="contact_us">
+  <div class="quickinquiry">
+    <div class="inquiry_form" dir="rtl">
+      <h2>أبلغ عن حالة</h2>
+      <%= form_for(@need) do |f| %>
       <ul>
-      <% @need.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <li>
+          <div class="field"><%= f.label :title %><%= f.text_field :title %></div>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+          <div class="field">
+            <%= f.label :description %>
+            <%= f.text_area :description, :cols=>40, :rows=>4 %>
+          </div>
+          
+          
+          <div class="field">
+            <%= f.label :urgency_id %>
+            <%= f.select :urgency_id, Urgency.all.collect{|c| [c.name, c.id]} %>
+          </div>
+          
+          <div class="field">
+            <%= f.label :category_id %>
+            <%= f.select :category_id, Category.all.collect{|c| [c.name, c.id]} %>
+          </div>
+          
+            <div class="field">
+            <%= f.label :city_id %>
+            <%= f.select :city_id, City.all.collect{|c| [c.name, c.id]} %>
+          </div>
+          
+          <div class="field">
+            <%= f.label :district_id %>
+            <%= f.select :district_id, District.all.collect{|d| [d.name, d.id]} %>
+          </div>
+          
+          <div class="field">
+            <%= f.label :address %>
+            <%= f.text_area :address, :cols=>40, :rows=>4 %>
+          </div>
+          
+          <%= hidden_field_tag "fb_id"%>
+          
+        </li>
+        <li>
+          <div class="actions">
+            <%= f.submit :class=>"btn_submit" %>
+          </div>
+      </ul>
+      <% end %>
+    </div>
+    <br class="clear">
   </div>
-  
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  
-  
-  <div class="field">
-    <%= f.label :urgency_id %><br />
-    <%= f.select :urgency_id, Urgency.all.collect{|c| [c.name, c.id]} %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :category_id %><br />
-    <%= f.select :category_id, Category.all.collect{|c| [c.name, c.id]} %>
-  </div>
-  
-    <div class="field">
-    <%= f.label :city_id %><br />
-    <%= f.select :city_id, City.all.collect{|c| [c.name, c.id]} %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :district_id %><br />
-    <%= f.select :district_id, District.all.collect{|d| [d.name, d.id]} %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_area :address %>
-  </div>
-  
-  <%= hidden_field_tag "fb_id"%>
-  
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
+
