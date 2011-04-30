@@ -356,13 +356,13 @@ banner section
 	height:242px;
 }
 .slideaccor h5 {
-	font-size:24px;
+	font-size:20px;
 	font-family:Arial, Helvetica, sans-serif;
 	color:#fff;
 	font-weight:normal;
-	line-height:20px;
+	line-height:40px;
 	letter-spacing:-1px;
-	padding-bottom:14px;
+	padding-bottom:0px;
 }
 .slideaccor ul li {
 	float:left;
