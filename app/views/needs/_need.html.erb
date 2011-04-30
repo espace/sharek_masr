@@ -1,10 +1,21 @@
+<!-- AddThis Button BEGIN -->
+
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dbc3cc21c3904e2"></script>
+<!-- AddThis Button END -->
 <div class="blog_box">
   <div class="blog_heading">
     <h2><%= link_to(need.title, need)%></h2>
   </div>
   <div class="blog_date">
     <p>تم الاضافة في<%= need.created_at%> </p>
-    <div class="social_panel"> <a href="#"><img src="../images/bg-tweet.gif" alt="" /></a> <a href="#"><img src="../images/bg-facebook.gif" alt="" /></a> </div>
+    <div class="social_panel">
+       <div class="addthis_toolbox addthis_default_style ">
+          <a addthis:url="<%=need_url(need)%>" class="addthis_button_preferred_1"></a>
+          <a addthis:url="<%=need_url(need)%>" class="addthis_button_preferred_2"></a>
+          <a addthis:url="<%=need_url(need)%>" class="addthis_button_preferred_3"></a>
+      </div>
+    </div>
   </div>
   <div class="blog_content"> 
     <p><%= need.description%></p>
