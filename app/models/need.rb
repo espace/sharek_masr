@@ -10,7 +10,7 @@ class Need < ActiveRecord::Base
   #scopes
   validates :title, :address, :urgency_id, :category_id, :presence=>true
   
-  
+  default_scope :order=>"updated_at DESC"
   scope :by_category, lambda { |category_id|
     self.where(:category_id => category_id)
   }
