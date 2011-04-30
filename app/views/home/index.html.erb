@@ -79,33 +79,24 @@
       <div class="outer_row">
         <div class="col-left">
           <div class="spotlight_slider">
-            <h2>Spotlights</h2>
-            <div class="box_spotlight"> <img src="./images/img-sm1.jpg" alt="" />
+            <h2>انجازات</h2>
+            <%Need.satisfied.last(4).each do |n|%>
+            <div class="news_box">  <span class="date"> <img src="./images/img-ico-calendar.gif" alt="" /> <strong>26 April</strong> </span> 
               <div class="spot_desc">
-                <h3><a href="#">Lorem ipsum dolor sit amet consec.</a></h3>
-                <p>Lorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit amet sem felis. Dc adipiscing, velit vitae malesuada. <a href="#">Read More</a></p>
+                <h3><%=n.title%></h3>
+                <p> <%=n.description%></p>
               </div>
             </div>
-            <div class="box_spotlight"> <img src="./images/img-sm2.jpg" alt="" />
-              <div class="spot_desc">
-                <h3><a href="#">Lorem ipsum dolor sit amet consec.</a></h3>
-                <p>Lorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit amet sem felis. Dc adipiscing, velit vitae malesuada. <a href="#">Read More</a></p>
-              </div>
-            </div>
-            <div class="box_spotlight"> <img src="./images/img-sm3.jpg" alt="" />
-              <div class="spot_desc">
-                <h3><a href="#">Lorem ipsum dolor sit amet consec.</a></h3>
-                <p>Lorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit amet sem felis. Dc adipiscing, velit vitae malesuada. <a href="#">Read More</a></p>
-              </div>
-            </div>
+
+            <%end%>
           </div>
           <div class="news_slider">
-            <h2>احتياجات</h2>
-            <%Need.all.each do |need|%>
+            <h2><%= link_to("احتياجات", needs_url)%></h2>
+            <%Need.first(4).each do |need|%>
                 <div class="news_box"> <span class="date"> <img src="./images/img-ico-calendar.gif" alt="" /> <strong>26 April</strong> </span>
                   <div class="news_desc">
                     <h3><a href="#"><%= link_to(need.title, need) %></h3>
-                    <p>Lorem ipsum dolor sit amet, ctetur adiiscing elit. Quisque sit <a href="#">Read More</a></p>
+                    <p><%= need.description%></p>
                   </div>
                 </div>
             <%end%>        
