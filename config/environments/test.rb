@@ -33,3 +33,7 @@ Sharek::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 end
+
+FB_APP_ID='221886041162136'
+FB_APP_SECRET='5be49ab3da969472f3e3880b807653d7'
+

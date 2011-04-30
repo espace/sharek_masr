@@ -47,3 +47,7 @@ Sharek::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 end
+
+FB_APP_ID='221886041162136'
+FB_APP_SECRET='5be49ab3da969472f3e3880b807653d7'
+
